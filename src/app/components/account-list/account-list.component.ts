@@ -19,6 +19,8 @@ export class AccountListComponent implements OnInit {
   ngOnInit(): void {
     this.accountService.getAccounts().subscribe(accounts=>{
       this.accounts = accounts;
+    }, error=>{
+      this.router.navigate(['error/400'])
     });
   }
 
@@ -30,5 +32,4 @@ export class AccountListComponent implements OnInit {
       this.router.navigate(['error/400'])
     });
   }
-
 }

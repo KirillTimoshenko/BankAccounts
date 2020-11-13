@@ -44,7 +44,7 @@ export class AccountInfoComponent implements OnInit {
       this.account = returnedAccount;
       this.initTransactionTable()
     }, error=>{
-      this.router.navigate(['404'])
+      this.router.navigate(['error/400'])
     })
   }
 
@@ -77,7 +77,7 @@ export class AccountInfoComponent implements OnInit {
     this.transactionService.getTransactions(this.account.id).subscribe(transactions=>{
       this.transactions = transactions;
     }, error=>{
-      this.router.navigate(['404'])
+      this.router.navigate(['error/400'])
     });
   }
 
@@ -104,7 +104,7 @@ export class AccountInfoComponent implements OnInit {
       this.account = returnedAccount;
       this.initTransactionTable();
     }, error=>{
-      this.router.navigate(['404'])
+      this.router.navigate(['error/400'])
     })
   }
 
