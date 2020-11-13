@@ -30,6 +30,6 @@ export class TransactionServiceService {
   getTransactions(id: number): Observable<Transaction[]> {
     return this.http.get<Transaction[]>(
       `${this.accountUrl}/${this.transactionStr}/${id}`
-      );
+    );
   }
 }

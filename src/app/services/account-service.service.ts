@@ -26,7 +26,7 @@ export class AccountServiceService {
   
     return this.http.post<Account>(
       url, account, httpOptions
-      );
+    );
   }
 
 
@@ -41,12 +41,12 @@ export class AccountServiceService {
   getAccounts(): Observable<Account[]> {
     return this.http.get<Account[]>(
       `${this.accountUrl}/${this.accountsStr}`
-      );
+    );
   }
 
   getAccount(id: string): Observable<Account>{
     return this.http.get<Account>(
       `${this.accountUrl}/${this.accountStr}/${id}`
-      );
+    );
   }
 }

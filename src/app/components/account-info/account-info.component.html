@@ -8,21 +8,17 @@
     <button mat-stroked-button (click)="changeAccountStatus()">Close/Open account</button>
 </ng-container>
     
-<form *ngIf="account">
+<form *ngIf="account" [disabled]="disableForm()">
 <h4><b>Operations:</b></h4>
 <mat-form-field appearance="fill">
   <mat-label>choose operation</mat-label>
   <mat-select [(ngModel)]="flag" name="oper" [disabled]="disableForm()">
     <mat-option *ngFor="let oper of operations" [value]="oper.value">
-      {{oper.viewValue}}
+      {{oper.title}}
     </mat-option>
   </mat-select>
 </mat-form-field>
-</form>
 
-
-
-<form *ngIf="account" [disabled]="disableForm()">
 <mat-form-field appearance="fill">
     <mat-label>Amount:</mat-label>
     <input type="number" matInput [(ngModel)]="amount" name="amount" [disabled]="disableForm()">

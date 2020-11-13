@@ -24,8 +24,8 @@ export class AccountInfoComponent implements OnInit {
   displayedColumns: string[] = ['num', 'account', 'amount'];
 
   operations: Operation[] = [
-    {value: 1, viewValue: 'Refill'},
-    {value: -1, viewValue: 'Withdraw'}
+    {value: 1, title: 'Refill'},
+    {value: -1, title: 'Withdraw'}
   ]
 
   constructor(
@@ -52,7 +52,7 @@ export class AccountInfoComponent implements OnInit {
     console.log(`trying add transaction: ${this.flag*this.amount}`)
     console.log(`balance: ${this.account.balance+(this.flag*this.amount)}`)
 
-    if(this.account.balance+(this.flag*this.amount)<0){
+    if(this.account.balance + (this.flag * this.amount) < 0) {
       this._snackBar.open("Transaction denied: Not Enough Funds", "DENIED", {
         duration: 2000,
       });
