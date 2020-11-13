@@ -1,0 +1,15 @@
+.account {
+    background: #f4f4f4;
+    padding: 10px;
+    border-bottom: 1px #ccc dotted;
+}
+
+
+.is-closed {
+    background: lightgrey;
+    color: white;
+}
+
+.is-closed a{
+    color: white;
+}

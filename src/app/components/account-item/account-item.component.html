@@ -1,0 +1,17 @@
+<!-- <div [ngClass]="setClasses()">
+    <p>
+        <input 
+        type="checkbox" 
+        (change)="onTuggle(film)" 
+        [checked]="film.completed"/>
+        {{film.title}}
+        <button class='del' (click)="onDelete(film)">Delete</button>
+    </p>
+</div> -->
+
+<div [ngClass]="setClasses()">
+    <p>
+        <a [routerLink]="['/account', account.id]">{{account.title}}</a>
+    </p>
+    <p>{{account.status}}</p>
+</div>

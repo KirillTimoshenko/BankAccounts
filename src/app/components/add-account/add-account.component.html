@@ -1,0 +1,30 @@
+<!-- <form class="form" (ngSubmit)="onSubmit()">
+    <input type="text" name="title" [(ngModel)]="title" placeholder="Add account.."/>
+    <input type="submit" value="Submit" class="btn" />
+</form> -->
+
+<mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Create new account
+      </mat-panel-title>
+      <mat-panel-description>
+        {{panelOpenState ? '': 'Tap here to create new account'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Please, fill form</p>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="cname" #message>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Start balance</mat-label>
+        <input type="number" matInput [(ngModel)]="balance" #action>
+    </mat-form-field>
+
+    <button mat-stroked-button (click)="onSubmit()">Create Account</button>
+    
+</mat-expansion-panel>

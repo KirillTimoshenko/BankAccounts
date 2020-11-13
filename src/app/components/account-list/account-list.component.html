@@ -1,0 +1,6 @@
+<div>
+    <app-add-account (addAccountItem)="addAccount($event)"></app-add-account>
+    <app-account-item *ngFor="let account of accounts" [account]="account">
+
+    </app-account-item>
+</div>
